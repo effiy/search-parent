@@ -7,27 +7,22 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>search-solr-client</artifactId>
+    <artifactId>search-service-zookeeper</artifactId>
     <packaging>jar</packaging>
 
-    <name>search-solr-client</name>
+    <name>search-service-zookeeper</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
-        <!-- spring begin -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-        </dependency>
-        <!-- solrj begin -->
-        <dependency>
-            <groupId>org.apache.solr</groupId>
-            <artifactId>solr-solrj</artifactId>
-        </dependency>
-        <!--effiy begin-->
-        <dependency>
-            <groupId>cn.effiy.search</groupId>
-            <artifactId>search-commons-log4j</artifactId>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
