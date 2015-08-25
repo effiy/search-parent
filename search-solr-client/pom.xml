@@ -14,11 +14,6 @@
     <url>http://maven.apache.org</url>
 
     <dependencies>
-        <!-- spring begin -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-        </dependency>
         <!-- solrj begin -->
         <dependency>
             <groupId>org.apache.solr</groupId>
