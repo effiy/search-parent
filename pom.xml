@@ -5,6 +5,9 @@
   <groupId>cn.effiy.search</groupId>
   <artifactId>search-parent</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>search-commons-log4j</module>
+  </modules>
   <packaging>pom</packaging>
 
   <name>search-parent</name>

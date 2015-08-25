@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>search-parent</artifactId>
+        <groupId>cn.effiy.search</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <name>search-commons-log4j</name>
+    <artifactId>search-commons-log4j</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!--log4j2 begin-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+        <!--test begin-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>search-commons-log4j</finalName>
+        <plugins>
+
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <!-- http://www.darrenfang.com/2013/12/use-profile-to-manage-config-files-in-maven/ -->
+            <!-- mvn package -Pdevelopment -->
+            <id>development</id>
+            <properties>
+                <package.environment>development</package.environment>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/resources/development</directory>
+                    </resource>
+                    <resource>
+                        <directory>src/resources</directory>
+                        <includes>
+                            <include>*.xml</include>
+                            <include>*.properties</include>
+                        </includes>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
+</project>
