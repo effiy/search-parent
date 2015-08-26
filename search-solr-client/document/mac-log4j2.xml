@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--http://www.cnblogs.com/leo-lsw/archive/2013/12/20/log4j2tutorial.html-->
+<configuration status="error">
+    <!--先定义所有的appender-->
+    <appenders>
+        <!--这个输出控制台的配置-->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!--这个都知道是输出日志的格式-->
+            <PatternLayout pattern="%highlight{%d{HH:mm:ss.SSS} %-5level %logger{36}.%M() @%L - %msg%n}{FATAL=Bright Red, ERROR=Bright Magenta, WARN=Bright Yellow, INFO=Bright Green, DEBUG=Bright Cyan, TRACE=Bright White}"/>
+        </Console>
+
+        <!--文件会打印出所有信息，这个log每次运行程序会自动清空，由append属性决定，这个也挺有用的，适合临时测试用-->
+        <!--<File name="Test" fileName="C:\Users\chengliang\Desktop\logs\search\search-solr-client\test.log" append="false">-->
+        <File name="Test" fileName="/logs/search/search-solr-client/test.log" append="false">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </File>
+
+        <!--<File name="Error" fileName="C:\Users\chengliang\Desktop\logs\search\search-solr-client\error.log">-->
+        <File name="Error" fileName="/logs/search/search-solr-client/error.log">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{yyyy.MM.dd 'at' HH:mm:ss z} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </File>
+
+        <!--这个会打印出所有的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+        <!--<RollingFile name="RollingFile" fileName="C:\Users\chengliang\Desktop\logs\search\search-solr-client\app.log"-->
+                     <!--filePattern="C:\Users\chengliang\Desktop\logs\search\search-solr-client\app\$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">-->
+        <RollingFile name="RollingFile" fileName="/logs/search/search-solr-client/app.log"
+                     filePattern="/logs/search/search-solr-client/app/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} %L %M - %msg%xEx%n"/>
+            <SizeBasedTriggeringPolicy size="10MB"/>
+        </RollingFile>
+    </appenders>
+    <!--然后定义logger，只有定义了logger并引入的appender，appender才会生效-->
+    <loggers>
+        <!--FATAL：用在极端的情形中，即必须马上获得注意的情况。这个程度的错误通常需要触发运维工程师的寻呼机。-->
+        <!--
+            ERROR：显示一个错误，或一个通用的错误情况，但还不至于会将系统挂起。这种程度的错误一般会触发邮件的发送，
+            将消息发送到alert list中，运维人员可以在文档中记录这个bug并提交。
+         -->
+        <!--WARN：不一定是一个bug，但是有人可能会想要知道这一情况。如果有人在读log文件，他们通常会希望读到系统出现的任何警告。-->
+        <!--INFO：用于基本的、高层次的诊断信息。在长时间运行的代码段开始运行及结束运行时应该产生消息，以便知道现在系统在干什么。但是这样的信息不宜太过频繁。-->
+        <!--DEBUG：用于协助低层次的调试。-->
+        <!--TRACE：用于展现程序执行的轨迹。-->
+        <!--建立一个默认的root的logger-->
+        <root level="trace">
+            <appender-ref ref="Test"/>
+            <appender-ref ref="Console"/>
+            <appender-ref ref="Error"/>
+            <appender-ref ref="RollingFile"/>
+        </root>
+    </loggers>
+</configuration>
