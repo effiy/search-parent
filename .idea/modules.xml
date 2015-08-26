@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/search-cache-memcache/search-cache-memcache.iml" filepath="$PROJECT_DIR$/search-cache-memcache/search-cache-memcache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-cache-redis/search-cache-redis.iml" filepath="$PROJECT_DIR$/search-cache-redis/search-cache-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-commons-http/search-commons-http.iml" filepath="$PROJECT_DIR$/search-commons-http/search-commons-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-commons-json/search-commons-json.iml" filepath="$PROJECT_DIR$/search-commons-json/search-commons-json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-commons-log4j/search-commons-log4j.iml" filepath="$PROJECT_DIR$/search-commons-log4j/search-commons-log4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-database-index/search-database-index.iml" filepath="$PROJECT_DIR$/search-database-index/search-database-index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-database-ssm/search-database-ssm.iml" filepath="$PROJECT_DIR$/search-database-ssm/search-database-ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-parent.iml" filepath="$PROJECT_DIR$/search-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-solr-client/search-solr-client.iml" filepath="$PROJECT_DIR$/search-solr-client/search-solr-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/search-solr-index/search-solr-index.iml" filepath="$PROJECT_DIR$/search-solr-index/search-solr-index.iml" />
+    </modules>
+  </component>
+</project>

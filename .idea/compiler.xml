@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-commons-log4j" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="search-commons-log4j" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-commons-json" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="search-commons-json" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-commons-http" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="search-commons-http" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-database-ssm" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="search-database-ssm" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-database-index" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="search-database-index" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-solr-index" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="search-solr-index" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-solr-client" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="search-solr-client" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-cache-memcache" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="search-cache-memcache" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-cache-redis" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="search-cache-redis" />
+      </profile>
+      <profile default="false" name="Annotation profile for search-service-zookeeper" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="search-cache-memcache" target="1.7" />
+      <module name="search-cache-redis" target="1.7" />
+      <module name="search-commons-http" target="1.7" />
+      <module name="search-commons-json" target="1.7" />
+      <module name="search-commons-log4j" target="1.7" />
+      <module name="search-database-index" target="1.7" />
+      <module name="search-database-ssm" target="1.7" />
+      <module name="search-parent" target="1.5" />
+      <module name="search-service-zookeeper" target="1.7" />
+      <module name="search-solr-client" target="1.7" />
+      <module name="search-solr-index" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
